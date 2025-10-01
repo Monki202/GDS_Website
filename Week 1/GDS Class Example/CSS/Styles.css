@@ -1,0 +1,12 @@
+#csstest{
+    color: cornflowerblue;
+    font-size: 100px;
+    border: 5px solid sandybrown;
+    background-image: image-set(h);
+}
+
+.classtest{
+    color: rgb(255, 0, 0);
+    font-size: 25px;
+    background-color: aquamarine; width: 250px;
+}
