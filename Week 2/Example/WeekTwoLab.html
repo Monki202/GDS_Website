@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Week 2 Lab</title>
+    </head>
+
+    <body>
+        <h1>Button Clicker</h1>
+        <h2 id="output">0</h2>
+        <p id="cost">10</p>
+        <input type="button" id="btn" value="ClickMe">
+        <input type="button" id="reset-btn" value="ResetClick">
+        <input type="button" id="upgrade-btn" value="Upgrade Clicks">
+        <br>
+        <br>
+        <input type="button" id="multiply-clicks" value="Mulitply Clicks">
+        <input type="text" name="multiply" id="multiply1">
+        
+        
+
+        
+
+
+        <script>
+            //not in use  <input type="text" name="upgrade" id="upgrade">
+            // References
+            var clickButton = document.getElementById("btn")
+            var resetButton = document.getElementById("reset-btn")
+            var upgradeClicks = document.getElementById("upgrade-btn")
+            var output = document.getElementById("output")
+            var costAmountOut = document.getElementById("cost")
+            var mulitplyclick = document.getElementById("multiply-clicks")
+            
+
+            //Internal Variables
+            var clicks = 0
+            var clickByAmount = 1
+            var costAmount = 10
+
+            function increment()
+            {
+                //Add to clicks
+                clicks += clickByAmount
+                //change inner html
+                output.innerHTML = clicks
+            }
+            
+            clickButton.addEventListener("click", increment)
+
+            function resetClicks()
+            {
+                //Reset Clicks
+                clicks = 0
+                output.innerHTML = 0
+            }
+
+            resetButton.addEventListener("click", resetClicks)
+            
+            function UpgradeClicks()
+            {
+                if(clicks => costAmount)
+                {
+                    costAmount * 1.4
+                    clickByAmount * 2
+                    clicks - costAmount
+                    output.innerHTML = clicks
+                    costAmountOut.innerHTML = costAmount
+                }
+
+            }
+
+            upgradeClicks.addEventListener("click", UpgradeClicks)
+
+            function mulitplyClicks()
+            {
+                var multiplybox = document.getElementById("multiply1")
+                clicks *= Number( multiplybox.value)
+                output.innerHTML = clicks
+                console.log = "hi"
+            }
+
+            mulitplyclick.addEventListener("click", mulitplyClicks)
+
+
+        </script>
+
+    </body>
+
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Week 2 | Javascript!</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <div id="jsExample">
+
+    </div>
+
+    <script>
+        //manipulating the html document
+        var divContainer = document.getElementById("jsExample")
+        //setting the inner html
+        divContainer.innerHTML = "<h1>Hello!</h1>"
+        //adding onto the inner html
+        divContainer.innerHTML += "<h2>Adding</h2>"
+
+        var Hello = 2;
+        
+        function addNumbers(numberOne, numberTwo,)
+        {
+            console.log(numberOne + numberTwo)
+        }
+
+        function alertMessage(messageToAlert)
+        {
+            addNumbers(10,26)
+            alert(messageToAlert)
+        }
+
+        function alertMessageTwo(paramOne, paramTwo)
+        {
+            alert(paramOne + paramTwo)
+        }
+
+        alertMessage("hello")
+        alertMessageTwo("hello", "hello two")
+
+        
+       
+        var test = 11;
+        console.log(test)
+
+        if(test == 10) 
+        {
+            console.log("Hi")
+        }else console.log ("Evil Hi") 
+
+
+        var compareString = "text"
+
+        if(compareString == "Evil text") 
+        {
+            console.log("HERRO")
+        }else (console.log ("im the evil console error"))
+
+
+        var a = 10;
+        var b = 15;
+
+        console.log(a+b)
+        console.log(a-b)
+        console.log(a*b)
+
+    </script>
+
+</body>
+</html>
