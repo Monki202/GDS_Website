@@ -1,0 +1,45 @@
+#wrapper
+{
+    border: 15px groove rgb(100, 200, 237);
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+#hello
+{
+    text-shadow: 1px 1px 0.2pc rgb(0, 0, 0);
+    animation-name: RainbowHelloText;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    font-style: italic;
+    font-size: 70px;
+}
+
+#bg
+{
+    background-color: aqua;
+}
+
+.buttonThing
+{
+    
+}
+
+@keyframes RainbowHelloText 
+{
+    0%{color: purple;}
+
+    16.66%{color: red;}
+
+    33.32%{color: orange;}
+
+    49.98%{color: yellow;}
+
+    66.64%{color: green;}
+
+    83.30%{color: blue;}
+
+    100%{color: purple;}
+
+}
+

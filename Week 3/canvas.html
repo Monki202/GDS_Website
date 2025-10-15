@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Canvas lab Thingamajig</title>
+<meta charset="UTF-8">
+</head>
+
+<body>
+    
+    <h1>Canvas Lab</h1>
+    <canvas id="canvas" width="800" height="600" style="border: 1px solid;"></canvas>
+
+    <script>
+
+        var canvas = document.getElementById("canvas")
+        var ctx = canvas.getContext("2d")
+
+        ctx.fillStyle = "#7DDA58"
+
+        ctx.fillRect(20,20,50,100)
+
+        ctx.strokeStyle = "#7DDA00"
+        ctx.lineWidth = "2"
+        ctx.strokeRect(100,20,50,100)
+
+        ctx.fillStyle = "#BFD641"
+        ctx.beginPath()
+        ctx.moveTo(390,300)
+        ctx.lineTo(390,380)
+        ctx.lineTo(370,380)
+        ctx.lineTo(395,420)
+        ctx.lineTo(420,380)
+        ctx.lineTo(400,380)
+        ctx.lineTo(400,300)
+        ctx.lineTo(390,300)
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.strokeStyle = "red"
+        ctx.fillStyle = "blue"
+        ctx.beginPath()
+        ctx.moveTo(400,20)
+        ctx.lineTo(450,100)
+        ctx.lineTo(400,120)
+        ctx.lineTo(350,100)
+        ctx.closePath()
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = "aqua"
+        ctx.strokeStyle = "aquamarine"
+        ctx.beginPath();
+        ctx.arc(200,300,100,0,4 * Math.PI/2 ,false)
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke()
+
+        ctx.strokeStyle = "black"
+        ctx.fillStyle = "black"
+        ctx.beginPath();
+        ctx.arc(600,250,70,3.15, 0, true)
+        ctx.closePath()
+        ctx.fill()
+
+        ctx.beginPath();
+        ctx.arc(550,200,30,2*Math.PI, 0, true)
+        ctx.closePath()
+        ctx.fill()
+
+        ctx.strokeStyle = "black"
+        ctx.beginPath();
+        ctx.arc(650,200,30,2*Math.PI, 0, true)
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke()
+
+        ctx.strokeStyle = "black"
+        ctx.beginPath();
+        ctx.arc(600,235,120,2*Math.PI, 0, true)
+        ctx.closePath()
+        ctx.stroke()
+
+        ctx.strokeStyle = "white"
+        ctx.fillStyle = "white"
+        ctx.fillRect(582,253,35,35)
+
+        
+        
+
+
+        
+
+        
+        
+
+        
+
+    </script>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
