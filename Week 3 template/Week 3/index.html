@@ -18,15 +18,19 @@
     
     <!-- Background Image -->
     <div id="bg">
+        
+        
 
         <!-- Wrapper: Holds all of the page content, and let's us center everything -->
-        <div id="wrapper">
+        <div id="wrapper" style="background-image: url('./Images/1341352.jpeg'); background-size:  cover; background-position: center; background-repeat: no-repeat; min-height: 100vh;">
             
 
 
             <!-- Header ------------- -->
             <div id="header" class="boarder-unity">
-                <h1 id="hello" class="gds">Welcome&nbsp;to&nbsp;GDS111</h1>
+                
+                 <h1 id="hello" class="gds">  Welcome&nbsp;to&nbsp;GDS111</h1>
+                 <button class="buttonHidden" id="ThisDoesNothing">This button does nothing</button>
             </div>
 
             <!-- Navigation --------------->
@@ -37,18 +41,21 @@
                     <button class="buttonThing" id="drawCircle">Draw Circle</button>
                     <button class="buttonThing" id="drawPentagon">Draw Pentagon</button>
                     <button class="buttonThing" id="drawStar">Draw Star</button>
+                    <button class="buttonThing" id="drawLine">Draw Line</button>
+                    <button class="buttonThing" id="clearCanvas">Clear Canvas</button>
                 </div>
             </div>
 
             <!-- Main Content! -->
             <div id="main-content" class="border-unity">
                 <!-- Give this a background image! -->
-                <div id="pictureDiv" class="boarder-unity">
+                <div id="pictureDiv" class="boarder-unity" >
+                    
 
                     <!-- SHAPES MUST GO INTO THIS DIV, ONCE DONE Shape Title can disappear -->
                     <div id="shapeContent">
-                        <h1 id="shapeTitle">Shapes Should Draw Here</h1>
-                        <canvas id="canvas" width="800" height="800" style="border: 1px solid;">
+                        <h1 id="shapeTitle"></h1>
+                        <canvas id="canvas" width="800" height="800">
                             <img src="./shapes.png" alt="">
 
                         </canvas>
@@ -68,25 +75,28 @@
             var drawCircle = document.getElementById("drawCircle")
             var drawPentagon = document.getElementById("drawPentagon")
             var drawStar = document.getElementById("drawStar")
+            var drawLine = document.getElementById("drawLine")
+            var clearCanvas = document.getElementById("clearCanvas")
+            const TheNothing = document.getElementById("ThisDoesNothing")
             
             drawSquare.addEventListener("click", function()
             {
-                ctx.fillStyle = "yellow"
+                ctx.fillStyle = "#ffff00"
                 ctx.strokeStyle = "black"
                 ctx.lineWidth = "5"
+                ctx.beginPath();
                 ctx.fillRect(86, 303, 100,100)
                 ctx.strokeRect(86, 303, 100,100)
+                ctx.fill()
+                ctx.stroke()
             })
-            
-            
-
-            
             
             drawCircle.addEventListener("click", function()
             {
-                ctx.fillStyle = "ffff00"
+                ctx.fillStyle = "#ffff00"
                 ctx.strokeStyle = "red"
                 ctx.lineWidth = "5"
+                ctx.beginPath();
                 ctx.arc(386, 442, 66, 0, 2*Math.PI,true)
                 ctx.closePath()
                 ctx.fill()
@@ -95,9 +105,10 @@
 
             drawPentagon.addEventListener("click", function()
             {
-                ctx.fillStyle = "ff00ff"
-                ctx.strokeStyle = "00ffff"
+                ctx.fillStyle = "#ff00ff"
+                ctx.strokeStyle = "#00ffff"
                 ctx.lineWidth = "5"
+                ctx.beginPath();
                 ctx.moveTo(558,309)
                 ctx.lineTo(668,284)
                 ctx.lineTo(724,378)
@@ -107,24 +118,13 @@
                 ctx.fill()
                 ctx.stroke()
             })
-            
 
             drawStar.addEventListener("click", function()
             {
-                ctx.fillStyle = "ff00ff"
+                ctx.fillStyle = "#ffff00"
                 ctx.strokeStyle = "red"
                 ctx.lineWidth = "5"
-                ctx.moveTo(86,682)
-                ctx.lineTo(275,550)
-                ctx.stroke();
-            })
-            
-
-            drawLine.addEventListener("click", function()
-            {
-                ctx.fillStyle = "ffff00"
-                ctx.strokeStyle = "rgb (32,32,32)"
-                ctx.lineWidth = "5"
+                ctx.beginPath();
                 ctx.moveTo(636,497)
                 ctx.lineTo(665,552)
                 ctx.lineTo(730,568)
@@ -138,7 +138,36 @@
                 ctx.closePath()
                 ctx.fill()
                 ctx.stroke()
+                context.clearRect(0, 0, canvas.width, canvas.height);   
             })
+
+            drawLine.addEventListener("click", function()
+            {
+                ctx.strokeStyle = "red"
+                ctx.lineWidth = "5"
+                ctx.beginPath();
+                ctx.moveTo(86,682)
+                ctx.lineTo(275,550)
+                ctx.closePath()
+                ctx.stroke();
+            })
+
+            clearCanvas.addEventListener("click", function()
+            {
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
+            })
+
+            TheNothing.addEventListener("mouseover", () => {
+                TheNothing.textContent = "Why did you try to click me"
+            })
+
+            TheNothing.addEventListener("mouseout", () => {
+                TheNothing.textContent = "I do nothing btw"
+            })
+
+            
+
+            
             
 
 

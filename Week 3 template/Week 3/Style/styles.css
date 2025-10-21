@@ -1,9 +1,31 @@
 #wrapper
 {
-    border: 15px groove rgb(100, 200, 237);
+    border: 15px groove rgb(0, 0, 0);
     text-align: center;
-    background-color: cornflowerblue;
+    background-color: black;
 }
+
+.buttonThing
+{
+    max-width: 150px;
+    max-height: 50px;
+    width: 115px;
+    height: 40px;
+    margin: auto;
+    box-shadow: 3px 3px 0.4pc;
+    background-color: rgb(0, 255, 64);
+    color: black;
+    transition: transform 0.3s ease;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.buttonHidden
+{
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
 
 #hello
 {
@@ -13,16 +35,18 @@
     animation-iteration-count: infinite;
     font-style: italic;
     font-size: 70px;
+    transition: ease-in-out;
 }
+
+#canvas
+{
+    border: 20px ridge rgb(0, 0, 0);
+}
+
+
 
 #bg
 {
-    background-color: aqua;
-}
-
-.buttonThing
-{
-    
 }
 
 @keyframes RainbowHelloText 
@@ -42,4 +66,21 @@
     100%{color: purple;}
 
 }
+
+.buttonThing:hover
+{
+    transform: scale(1.4);
+    background-color: aqua;
+}
+
+.buttonHidden:hover
+{
+    transform: scale(2);
+    background-color: aqua;
+}
+
+
+
+
+
 
