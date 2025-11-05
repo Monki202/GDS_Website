@@ -86,9 +86,9 @@ function main()
     //erases the screen
     ctx.clearRect(0,0,c.width,c.height); 
 
-    ctx.font = "30px Arial"
+    ctx.font = "64px Arial"
     ctx.fillStyle = "black"
-    ctx.fillText("Score:" + score, 60,40)
+    ctx.fillText("Score:" + score, 140,60)
 
     //moves the player if the variables in the controls.js are equal to true
     if(d==true){ avatar.x += avatar.vx; }
